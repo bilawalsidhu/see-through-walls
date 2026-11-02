@@ -26,6 +26,10 @@ It's a ready-to-run example that shows how to build a **shared augmented reality
 - **Pose sharing.** Once a device knows where it is, it keeps sending its position and direction (its "pose") to the other devices over Wi-Fi, many times a second. Every device uses those updates to draw an avatar for each other player.
 - **Skeleton-through-walls.** The app also downloads a 3D model of the room's surfaces. When the line between your camera and another player's avatar passes through a wall in that model, the avatar is swapped for a glowing skeleton so you still see it.
 
+### Does this infer infrared imagery?
+
+No. The current sample uses visible-light camera frames for localization and pose estimation; it does not ingest thermal or infrared data, and it does not reconstruct or infer a view through walls. The "wall vision" effect is a visualization based on the downloaded room geometry: when that geometry occludes another player's avatar, the app renders a skeleton silhouette instead.
+
 ---
 
 ## Two ways to run it
